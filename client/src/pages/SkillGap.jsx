@@ -5,6 +5,7 @@ function SkillGap() {
     const navigate = useNavigate();
 
     const [jobDescription, setJobDescription] = useState("");
+    const [resumeAnalysis, setResumeAnalysis] = useState(null);
     const [result, setResult] = useState(null);
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(true);
@@ -91,20 +92,63 @@ function SkillGap() {
         fetchLatestJob();
     }, [navigate]);
 
+    // Load latest saved resume analysis
+    useEffect(() => {
+        const fetchLatestResume = async () => {
+            try {
+                const token = localStorage.getItem("token");
+
+                if (!token) {
+                    navigate("/login");
+                    return;
+                }
+
+                const response = await fetch(
+                    "https://intiforage-backend.onrender.com/api/resume/latest",
+                    {
+                        headers: {
+                            Authorization: `Bearer ${token}`
+                        }
+                    }
+                );
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    setError(
+                        data.message || "Failed to load resume analysis."
+                    );
+                    return;
+                }
+
+                if (!data.resume || !data.resume.analysis) {
+                    setError("Please analyze your resume first.");
+                    return;
+                }
+
+                setResumeAnalysis(data.resume.analysis);
+            } catch (error) {
+                console.error("Load resume analysis error:", error);
+
+                setError(
+                    "Unable to connect to the server."
+                );
+            }
+        };
+
+        fetchLatestResume();
+    }, [navigate]);
+
     const analyzeSkillGap = () => {
         if (!jobDescription.trim()) {
             setError("Please analyze a job description first.");
             return;
         }
 
-        const savedAnalysis = localStorage.getItem("resumeAnalysis");
-
-        if (!savedAnalysis) {
+        if (!resumeAnalysis) {
             setError("Please analyze your resume first.");
             return;
         }
-
-        const resumeAnalysis = JSON.parse(savedAnalysis);
 
         const resumeSkills = resumeAnalysis.detectedSkills.map((skill) =>
             skill.toLowerCase()
@@ -295,6 +339,7 @@ function SkillGap() {
                 )}
 
             </main>
+
         </div>
     );
 }
