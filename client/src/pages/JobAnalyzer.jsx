@@ -82,7 +82,7 @@ function JobAnalyzer() {
 
         try {
             const response = await fetch(
-                "http://localhost:5000/api/jobs",
+                "https://intiforage-backend.onrender.com/api/jobs",
                 {
                     method: "POST",
                     headers: {

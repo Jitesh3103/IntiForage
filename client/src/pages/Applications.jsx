@@ -27,7 +27,7 @@ function Applications() {
 
         try {
             const response = await fetch(
-                "http://localhost:5000/api/applications",
+                "https://intiforage-backend.onrender.com/api/applications",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -68,7 +68,7 @@ function Applications() {
 
         try {
             const response = await fetch(
-                "http://localhost:5000/api/applications",
+                "https://intiforage-backend.onrender.com/api/applications",
                 {
                     method: "POST",
                     headers: {
@@ -110,7 +110,7 @@ function Applications() {
 
         try {
             const response = await fetch(
-                `http://localhost:5000/api/applications/${id}/status`,
+                `https://intiforage-backend.onrender.com/api/applications/${id}/status`,
                 {
                     method: "PUT",
                     headers: {
@@ -149,7 +149,7 @@ function Applications() {
 
         try {
             const response = await fetch(
-                `http://localhost:5000/api/applications/${id}`,
+                `https://intiforage-backend.onrender.com/api/applications/${id}`,
                 {
                     method: "DELETE",
                     headers: {

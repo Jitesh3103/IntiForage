@@ -62,7 +62,7 @@ function TechnicalTheory() {
 
         try {
             const response = await fetch(
-                "http://localhost:5000/api/interview/questions",
+                "https://intiforage-backend.onrender.com/api/interview/questions",
                 {
                     method: "POST",
                     headers: {

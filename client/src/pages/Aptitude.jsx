@@ -37,7 +37,7 @@ function Aptitude() {
                 }
 
                 const response = await fetch(
-                    "http://localhost:5000/api/jobs",
+                    "https://intiforage-backend.onrender.com/api/jobs",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
@@ -103,7 +103,7 @@ function Aptitude() {
             }
 
             const response = await fetch(
-                "http://localhost:5000/api/interview/questions",
+                "https://intiforage-backend.onrender.com/api/interview/questions",
                 {
                     method: "POST",
                     headers: {
@@ -209,7 +209,7 @@ function Aptitude() {
             }
 
             const jobResponse = await fetch(
-                "http://localhost:5000/api/jobs",
+                "https://intiforage-backend.onrender.com/api/jobs",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -244,7 +244,7 @@ function Aptitude() {
                 latestJob?.detected_skills || "";
 
             const response = await fetch(
-                "http://localhost:5000/api/ai/aptitude",
+                "https://intiforage-backend.onrender.com/api/ai/aptitude",
                 {
                     method: "POST",
 

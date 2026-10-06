@@ -22,7 +22,7 @@ function ResumeQuestions() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/interview/resume-questions",
+                "https://intiforage-backend.onrender.com/api/interview/resume-questions",
                 {
                     method: "POST",
                     headers: {

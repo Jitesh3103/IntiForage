@@ -49,7 +49,7 @@ function SkillGap() {
                 }
 
                 const response = await fetch(
-                    "http://localhost:5000/api/jobs",
+                    "https://intiforage-backend.onrender.com/api/jobs",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`

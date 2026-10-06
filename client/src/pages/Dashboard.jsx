@@ -36,7 +36,7 @@ function Dashboard() {
         // Fetch Logged-In User
         // -------------------------------------------------
 
-        fetch("http://localhost:5000/api/auth/me", {
+        fetch("https://intiforage-backend.onrender.com/api/auth/me", {
 
             headers: {
 
@@ -77,7 +77,7 @@ function Dashboard() {
         // Fetch User's Latest Resume
         // -------------------------------------------------
 
-        fetch("http://localhost:5000/api/resume/latest", {
+        fetch("https://intiforage-backend.onrender.com/api/resume/latest", {
 
             headers: {
 
@@ -135,7 +135,7 @@ function Dashboard() {
         // Fetch Job Analyses
         // -------------------------------------------------
 
-        fetch("http://localhost:5000/api/jobs", {
+        fetch("https://intiforage-backend.onrender.com/api/jobs", {
 
             headers: {
 
@@ -185,7 +185,7 @@ function Dashboard() {
         // Fetch Applications
         // -------------------------------------------------
 
-        fetch("http://localhost:5000/api/applications", {
+        fetch("https://intiforage-backend.onrender.com/api/applications", {
 
             headers: {
 
