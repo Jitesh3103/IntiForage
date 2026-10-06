@@ -83,7 +83,7 @@ function Coding() {
                     },
 
                     body: JSON.stringify({
-                        category: "Coding / DSA",
+                        category: "Coding",
                         difficulty: difficulty
                     })
                 }
