@@ -2,36 +2,40 @@
 
 ### AI-Powered Career, Job Application & Interview Platform
 
-IntiForage is a full-stack career platform designed to help students and job seekers prepare for opportunities, analyze their resumes, understand job requirements, identify skill gaps, track applications, and practice interviews.
+IntiForage is a full-stack career platform designed to help students and job seekers prepare for job opportunities through resume analysis, job description analysis, skill-gap identification, application tracking, and structured interview preparation.
 
-## 🚀 Features
+## Features
 
-- 🔐 User Registration & Login
-- 📄 Resume Analyzer
-- 💼 Job Description Analyzer
-- 📊 Skill Gap Analysis
-- 📝 Job Application Tracker
-- 🎯 Aptitude Practice
-- 💻 Coding Questions
-- 📚 Technical Theory Questions
-- 📄 Resume-Based Interview Questions
-- 🏢 Company Interview Round
-- 👔 Manager Interview Round
-- 🤝 HR / Behavioral Interview Round
-- 🤖 AI-Powered Question Generation
-- 👤 User-Specific Data Management
+- User Registration & Login
+- JWT-based Authentication
+- Resume Analyzer
+- Job Description Analyzer
+- Skill Gap Analysis
+- Job Application Tracker
+- Aptitude Practice
+- Coding Questions
+- Technical Theory Questions
+- Resume-Based Interview Questions
+- Company Interview Round
+- Manager Interview Round
+- HR / Behavioral Interview Round
+- AI-Powered Question Generation
+- User-Specific Resume and Application Data
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
+
 - React
 - React Router
 - Tailwind CSS
 - JavaScript
 - HTML
 - CSS
+- Vite
 
 ### Backend
+
 - Node.js
 - Express.js
 - REST APIs
@@ -40,17 +44,22 @@ IntiForage is a full-stack career platform designed to help students and job see
 - PDF Processing
 
 ### Database
+
 - PostgreSQL
 
 ### AI
+
 - OpenAI API
 
-### Tools
+### Tools & Deployment
+
 - Git
 - GitHub
 - VS Code
+- Vercel
+- Render
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```text
 IntiForage/
@@ -71,29 +80,9 @@ IntiForage/
 │   │   ├── middleware/
 │   │   ├── routes/
 │   │   ├── scripts/
-│   │   ├── utils/
-│   │   └── server.js
-│   ├── package.json
-│   └── .gitignore
+│   │   └── utils/
+│   ├── server.js
+│   └── package.json
 │
 ├── .gitignore
 └── README.md
-
-
-Authentication
-IntiForage uses JWT-based authentication.
-Users can:
-- Create an account
-- Log in securely
-- Access protected features
-- Maintain their own resume and application data
-- Log out securely
-📊 Career Preparation
-The platform provides different interview preparation areas including:
-- Aptitude
-- Coding
-- Technical Theory
-- Resume-Based Questions
-- Company Round
-- Manager Round
-- HR / Behavioral Round
